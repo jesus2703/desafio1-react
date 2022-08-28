@@ -1,11 +1,19 @@
 import React from 'react';
+import Counter from './Counter';
 
-const ItemListContainer = ({saludo}) => {
+const ItemListContainer = () => {
+
+    function onAdd(count){
+
+        console.log(`Se han seleccionado ${count} productos`)
+    }
 
 
     return (
 
-        <h1>{saludo}</h1>
+        <div>
+            <Counter stock={10} onAdd={onAdd}/>
+        </div>
         
     );
 }
