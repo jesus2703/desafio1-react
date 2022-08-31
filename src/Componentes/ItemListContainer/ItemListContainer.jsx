@@ -19,7 +19,7 @@ const ItemListContainer = () => {
         })
         getProductos.then((response) => setProductos(response))
 
-    }, [productos]);
+    }, []);
 
     
     return <ItemList list={productos}/>
