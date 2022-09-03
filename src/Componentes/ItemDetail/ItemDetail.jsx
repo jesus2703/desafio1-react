@@ -2,10 +2,10 @@ import React from 'react';
 import Item from '../Item/Item';
 
 
-const ItemList = ({list}) => {
+const ItemDetail = ({item}) => {
     return (
         <>
-            {list.map(producto => (
+            {item.map(producto => (
                 <Item name={producto.name} img={producto.img} price={producto.price} stock={producto.stock} description={producto.description}/>
             ))}
 
@@ -13,4 +13,4 @@ const ItemList = ({list}) => {
     );
 }
 
-export default ItemList;
+export default ItemDetail;

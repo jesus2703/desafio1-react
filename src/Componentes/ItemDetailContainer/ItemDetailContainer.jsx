@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import ItemList from '../ItemList/ItemList';
+import ItemDetail from '../ItemDetail/ItemDetail';
 // import Counter from './Counter';
 import infoProductos from '../../data';
 
 
 
-const ItemListContainer = () => {
+const ItemLDetailContainer = () => {
     const [productos , setProductos] = useState([]);
 
     useEffect(() => {
@@ -22,10 +22,10 @@ const ItemListContainer = () => {
     }, []);
 
     
-    return <ItemList list={productos}/>
+    return <ItemDetail item={productos}/>
 }
 
-export default ItemListContainer;
+export default ItemLDetailContainer;
 
 // const ItemListContainer = () => {
 
