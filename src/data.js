@@ -6,4 +6,4 @@ const infoProductos = [
     
   ];
 
-  export default infoProductos
+  export default infoProductos;

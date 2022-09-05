@@ -1,4 +1,5 @@
 import './App.css';
+import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './Componentes/ItemDetailContainer/ItemDetailContainer';
 import Nabvar from './Componentes/Nabvar/Nabvar';
 
@@ -8,7 +9,9 @@ function App() {
         <div className="App">
             
             <Nabvar />
+            <ItemListContainer/>
             <ItemDetailContainer/>
+
             
         </div>
     );

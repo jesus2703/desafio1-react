@@ -1,15 +1,20 @@
 import React from 'react';
-import Item from '../Item/Item';
-
 
 const ItemDetail = ({item}) => {
     return (
-        <>
-            {item.map(producto => (
-                <Item name={producto.name} img={producto.img} price={producto.price} stock={producto.stock} description={producto.description}/>
-            ))}
-
-        </>
+        <div>
+            <div className="card m-2 bg-primary text-bg-info rounded-3 w-50">
+            <div className='card-body'>
+                <img src={item.img} alt="" className="w-100 card-img-top"/>
+                <h3>{item.name}</h3>
+                <p>Precio: {item.price}</p>
+                <p>{item.description}</p>
+                <p>Stock: {item.stock}</p>
+            </div>
+            <button className='btn btn-light'>Añadir a Carrito</button>
+        </div>
+            
+        </div>
     );
 }
 

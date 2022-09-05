@@ -1,47 +1,29 @@
 import React, {useEffect, useState} from 'react';
-import ItemDetail from '../ItemDetail/ItemDetail';
-// import Counter from './Counter';
 import infoProductos from '../../data';
+import ItemDetail from '../ItemDetail/ItemDetail';
 
+const ItemDetailContainer = () => {
 
-
-const ItemLDetailContainer = () => {
-    const [productos , setProductos] = useState([]);
+    const [item, setItem] = useState([]);
 
     useEffect(() => {
 
-        const getProductos = new Promise((resolve, reject) => {
+        const getProduct = new Promise((resolve, reject) => {
             setTimeout(() =>{
-                resolve(infoProductos);
+                resolve(infoProductos.find(products => products.id === 1));
 
             }, 2000)
 
         })
-        getProductos.then((response) => setProductos(response))
+        getProduct.then((response) => setItem(response))
 
     }, []);
 
+
     
-    return <ItemDetail item={productos}/>
+    return (
+        <ItemDetail item={item}/>
+    );
 }
 
-export default ItemLDetailContainer;
-
-// const ItemListContainer = () => {
-
-//     function onAdd(count){
-
-//         console.log(`Se han seleccionado ${count} productos`)
-//     }
-
-
-//     return (
-
-//         <div>
-//             <Counter stock={10} onAdd={onAdd}/>
-//         </div>
-        
-//     );
-// }
-
-// export default ItemListContainer;
+export default ItemDetailContainer;
