@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
         })
         getProduct.then((response) => setItem(response))
 
-    }, []);
+    }, );
 
 
     

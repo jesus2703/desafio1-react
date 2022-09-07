@@ -5,7 +5,7 @@ const ItemDetail = ({item}) => {
         <div>
             <div className="card m-2 bg-primary text-bg-info rounded-3 w-50">
             <div className='card-body'>
-                <img src={item.img} alt="imagen" className="w-100 card-img-top"/>
+                <img src={item.img} alt="imagen" className="card-img-top"/>
                 <h3>{item.name}</h3>
                 <p>Precio: {item.price}</p>
                 <p>{item.description}</p>

@@ -12,7 +12,7 @@ function App() {
             <Nabvar />
             <Routes>
                 <Route path='/' element={<ItemListContainer/>}></Route>
-                <Route path='/productos' element={<ItemListContainer/>}></Route>
+                <Route path='/categoria/:categoria' element={<ItemListContainer/>}></Route>
                 <Route path='/detalles/:id' element={<ItemDetailContainer/>}></Route>   
                
             </Routes>
