@@ -10,6 +10,7 @@ const ItemDetailContainer = () => {
     
 
     const [item, setItem] = useState({});
+    
 
     useEffect(() => {
 
