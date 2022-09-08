@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({item}) => {
 
@@ -45,7 +46,10 @@ const ItemDetail = ({item}) => {
                     <p className='m-1'>
                         Cantidad = {cantidad}
                     </p>
-                    <button className='btn btn-light' onClick={() => agregarAlCarrito(item, cantidad)}>Comprar</button>
+                    <Link to={"/cart"}>
+                        <button className='btn btn-light' onClick={() => agregarAlCarrito(item, cantidad)}>Comprar</button>
+                    </Link>
+                    
                 </div>
                     
             </div>
