@@ -1,16 +1,17 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
+
 
 const ItemDetail = ({item}) => {
 
     const [cantidad, setCantidad] = useState(1);
 
-    function agregarAlCarrito(item){
-        const productoCarrito = {id: item.id, cantidad: cantidad}
-        console.log(productoCarrito)
+    const {addItemToCard} = useContext(CartContext)
 
-    }
+    
 
     const cantidadProducto = (operacion) => {
         if(operacion === "+"){
@@ -47,7 +48,7 @@ const ItemDetail = ({item}) => {
                         Cantidad = {cantidad}
                     </p>
                     <Link to={"/cart"}>
-                        <button className='btn btn-light' onClick={() => agregarAlCarrito(item, cantidad)}>Comprar</button>
+                        <button className='btn btn-light' onClick={() => addItemToCard(product)}>Comprar</button>
                     </Link>
                     
                 </div>
