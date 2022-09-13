@@ -4,7 +4,6 @@ import ItemListContainer from './Componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from './Componentes/ItemDetailContainer/ItemDetailContainer';
 import Nabvar from './Componentes/Nabvar/Nabvar';
 import Cart from './Componentes/Cart/Cart';
-import CartProvider from './context/CartContext';
 
 
 
@@ -12,7 +11,7 @@ import CartProvider from './context/CartContext';
 function App() {
     return(
 
-        <CartProvider>
+        
 
             <BrowserRouter>
                     <div className="App">  
@@ -25,8 +24,7 @@ function App() {
                         </Routes>
                     </div>
             </BrowserRouter>
-        
-        </CartProvider>
+    
         
     );
     
