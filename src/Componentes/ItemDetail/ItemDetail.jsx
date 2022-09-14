@@ -49,10 +49,12 @@ const ItemDetail = ({item}) => {
                         Cantidad = {cantidad}
                     </p>
                     <Link to={"/cart"}>
-                        <button className='btn btn-light' onClick={() => addItem(item, cantidad)}>Comprar</button>
+                        <button className='btn btn-light' onClick={() => addItem(item, cantidad)}>Añadir a Carrito</button>
                     </Link>
                     
                 </div>
+
+                <button className='btn btn-success'>Finalizar Compra</button>
                     
             </div>
             

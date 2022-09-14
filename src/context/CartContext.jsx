@@ -34,11 +34,15 @@ const CarritoProvider = (props) => {
         setItems(items.filter(item => item.id !== id))
     }
 
+    const clearCart = () => {
+        setItems([])
+    }
+
 
     return (
 
         <>
-            <CarritoContext.Provider value={{items, addItem, removeItem}}>
+            <CarritoContext.Provider value={{items, addItem, removeItem, clearCart}}>
                 {props.children}
             </CarritoContext.Provider>
         </>
