@@ -8,16 +8,13 @@ import { Link } from 'react-router-dom';
 const ItemDetail = ({item}) => {
 
     const [cantidad, setCantidad] = useState(1);
-    const {carrito, agregarProductoCarrito} = useContext(CarritoContext);
+    const {addItem} = useContext(CarritoContext);
 
-    const agregarAlCarrito = (item, cantidad) => {
-        const productoCarrito = {id: item.id, precio: item.price, cantidad: cantidad}
-        agregarProductoCarrito(productoCarrito)
-        console.log(carrito)
-    }
+   
 
 
     const cantidadProducto = (operacion) => {
+
         if(operacion === "+"){
             if(cantidad < item.stock){
                 setCantidad(cantidad + 1)
@@ -52,7 +49,7 @@ const ItemDetail = ({item}) => {
                         Cantidad = {cantidad}
                     </p>
                     <Link to={"/cart"}>
-                        <button className='btn btn-light' onClick={() => agregarAlCarrito(item, cantidad)}>Comprar</button>
+                        <button className='btn btn-light' onClick={() => addItem(item, cantidad)}>Comprar</button>
                     </Link>
                     
                 </div>
