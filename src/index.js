@@ -1,3 +1,4 @@
+import './Firebase/Firebase'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { CarritoProvider } from './context/CartContext';

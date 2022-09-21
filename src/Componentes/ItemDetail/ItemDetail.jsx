@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({data}) => {
 
     const [cantidad, setCantidad] = useState(1);
     const {addItem} = useContext(CarritoContext);
@@ -16,7 +16,7 @@ const ItemDetail = ({item}) => {
     const cantidadProducto = (operacion) => {
 
         if(operacion === "+"){
-            if(cantidad < item.stock){
+            if(cantidad < data.stock){
                 setCantidad(cantidad + 1)
             } 
             
@@ -33,11 +33,11 @@ const ItemDetail = ({item}) => {
        
             <div className="card m-2 bg-primary text-bg-info rounded-3 w-25">
                 <div className='card-body'>
-                    <img src={item.img} alt="imagen" className="card-img-top"/>
-                    <h3>{item.name}</h3>
-                    <p>Precio: {item.price}</p>
-                    <p>{item.description}</p>
-                    <p>Stock: {item.stock}</p>
+                    <img src={data.img} alt="imagen" className="card-img-top"/>
+                    <h3>{data.name}</h3>
+                    <p>Precio: {data.price}</p>
+                    <p>{data.description}</p>
+                    <p>Stock: {data.stock}</p>
                     <button className='btn btn-primary' onClick={() => cantidadProducto("+")}>
                         +
                     </button>
@@ -49,7 +49,7 @@ const ItemDetail = ({item}) => {
                         Cantidad = {cantidad}
                     </p>
                     <Link to={"/cart"}>
-                        <button className='btn btn-light' onClick={() => addItem(item, cantidad)}>Añadir a Carrito</button>
+                        <button className='btn btn-light' onClick={() => addItem(data, cantidad)}>Añadir a Carrito</button>
                     </Link>
                     
                 </div>
