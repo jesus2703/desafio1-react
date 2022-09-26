@@ -38,11 +38,17 @@ const CarritoProvider = (props) => {
         setItems([])
     }
 
+    const getTotal = () => {
+        let total = 0
+        items.forEach((e) => total += (e.cantidad*e.price))
+        return total
+    }
+
 
     return (
 
         <>
-            <CarritoContext.Provider value={{items, addItem, removeItem, clearCart}}>
+            <CarritoContext.Provider value={{items, addItem, removeItem, clearCart, getTotal}}>
                 {props.children}
             </CarritoContext.Provider>
         </>
