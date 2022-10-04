@@ -9,6 +9,7 @@ const Cart = () => {
 
     return (
         <div className='container'>
+            <h3 className='my-5'>Carrito de Compras</h3>
             <div className='contain'>
                 {
                     items.map((item) => (
@@ -19,9 +20,9 @@ const Cart = () => {
                                 <tbody>
                                     <tr>
                                         <th className='col-2'>{item.name}</th>
-                                        <td>{item.cantidad}</td>
-                                        <td>{item.price}</td>
-                                        <td>{(item.price)*(item.cantidad)}</td>
+                                        <td>{item.cantidad}kgs</td>
+                                        <td>${item.price}</td>
+                                        <td>${(item.price)*(item.cantidad)}</td>
 
                                         <button onClick={() => removeItem(item.id)}>Eliminar Producto</button>
 
@@ -37,7 +38,7 @@ const Cart = () => {
                     
                     
                 }
-                <p>Total de su compra = ${getTotal()}</p>
+                <p>Total de su compra = <span>${getTotal()}</span></p>
 
                 
                 <Link to={"/"}>

@@ -54,7 +54,7 @@ const ItemDetail = ({data}) => {
                     
                 </div>
 
-                <button className='btn btn-success'>Finalizar Compra</button>
+                
                     
             </div>
             
