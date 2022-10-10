@@ -95,7 +95,9 @@ const Checkout = () => {
                 </form></div>
                 : 
                 <h4 className='text-center'>Su orden de compra es: {orderId}</h4>
+        
             }
+
             
         </>
     );

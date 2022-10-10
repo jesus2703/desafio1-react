@@ -31,9 +31,9 @@ const ItemDetail = ({data}) => {
 
     return (
        
-            <div className="card m-2 bg-primary text-bg-info rounded-3 w-25">
+            <div className="m-auto card m-2 bg-primary text-bg-info rounded-3 w-25 my-2">
                 <div className='card-body'>
-                    <img src={data.img} alt="imagen" className="card-img-top"/>
+                    <img src={data.img} alt="imagen" className="card-img-top w-100"/>
                     <h3>{data.name}</h3>
                     <p>Precio: {data.price}</p>
                     <p>{data.description}</p>

@@ -35,7 +35,7 @@ Recordar que tiene un backend realizado con Firebase, por si quieren descargar y
 
 ## Estructura
 
-![estructura](https://user-images.githubusercontent.com/44064190/95280201-d4657680-082a-11eb-90e4-70e061f2b7ec.png)
+![estructura](https://firebasestorage.googleapis.com/v0/b/carnes-ag.appspot.com/o/estruct-pro-react.png?alt=media&token=d88dc421-8b01-476a-aca6-efd69bf8a1e8)
 
 ## ScreenShots
 

@@ -42,12 +42,12 @@ const Cart = () => {
 
                 
                 <Link to={"/"}>
-                    <button className='btn btn-primary'>Seguir Comprando</button>
+                    <button className='btn btn-primary m-2'>Seguir Comprando</button>
                 </Link>
 
-                <button className='btn btn-primary' onClick={() => clearCart()}>Vaciar Carrito</button>
+                <button className='btn btn-primary m-2' onClick={() => clearCart()}>Vaciar Carrito</button>
                 <Link to={"/checkout"}>
-                    <button className='btn btn-primary'>Finalizar Compra</button>
+                    <button className='btn btn-primary m-2'>Finalizar Compra</button>
                 </Link>
                 
                 
