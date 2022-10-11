@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 
 const Nabvar = () => {
   return (
-    <div>
+    <div className='sticky-top'>
        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
          <div className="container-fluid">
-           <a className="navbar-brand" href="#navbar">
-             CARNES AG
-           </a>
+           <Link to="/">
+            <a className="navbar-brand" href="#navbar">
+              CARNES AG
+            </a>
+           </Link>
            <button
             className="navbar-toggler"
             type="button"
@@ -39,12 +41,6 @@ const Nabvar = () => {
                   <a className="nav-link" href="#pricing">Corte Con Hueso</a>
                 </li>
               </Link>
-              
-              <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  Contacto
-                </a>
-              </li>  
             </ul>
             <CartWidget/>
           </div>

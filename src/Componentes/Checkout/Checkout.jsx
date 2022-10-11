@@ -52,7 +52,7 @@ const Checkout = () => {
     return (
         <>
             
-            <h1 className='text-center'>Finalizando Compra</h1>
+            <h1 className='text-center my-4'>Finalizando Compra</h1>
             <hr />
             {!orderId?
                 <div><h4 className='text-center'>Completar Datos</h4>
